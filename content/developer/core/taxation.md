@@ -9,7 +9,7 @@ Spree represents taxes for an order by using `tax_categories` and `tax_rates`.
 
 Products within Spree can be linked to Tax Categories, which are then used to influence the taxation rate for the products when they are purchased. One Tax Category can be set to being the default for the entire system, which means that if a product doesn't have a related tax category, then this default tax category would be used.
 
-A `tax_category` can have many `tax_rates`, which indicate the rate at which the products belonging to a specific tax category will be taxed at. A tax rate links a tax rate to a particular zone (see [Addresses](addresses) for more information about zones). When an order is placed in a specific zone, any of the products for that order which have a tax zone that matches the order's tax zone will be taxed.
+A `tax_category` can have many `tax_rates`, which indicate the rate at which the products belonging to a specific tax category will be taxed at. A tax rate links a tax rate to a particular zone (see [Addresses](https://github.com/spree/spree-guides/blob/master/content/developer/core/addresses.md) for more information about zones). When an order is placed in a specific zone, any of the products for that order which have a tax zone that matches the order's tax zone will be taxed.
 
 The standard sales tax policies commonly found in the USA can be modeled as well as Value Added Tax (VAT) which is commonly used in Europe. These are not the only types of tax rules that you can model in Spree. Once you obtain a sufficient understanding of the basic concepts you should be able to model the tax rules of your country or jurisdiction.
 
@@ -65,7 +65,7 @@ To determine tax based on billing address instead of shipping address you will n
 
 ## Calculators
 
-In order to charge tax in Spree you also need a `Spree::Calculator`. In most cases you should be able to use Spree's `DefaultTax` calculator. It is suitable for both sales tax and price-inclusive tax scenarios. For more information, please read the [Calculators guide](calculators).
+In order to charge tax in Spree you also need a `Spree::Calculator`. In most cases you should be able to use Spree's `DefaultTax` calculator. It is suitable for both sales tax and price-inclusive tax scenarios. For more information, please read the [Calculators guide](https://github.com/spree/spree-guides/blob/master/content/developer/core/calculators.md).
 
 ***
 The `DefaultTax` calculator uses the item total (exclusive of shipping) when computing sales tax.
@@ -92,7 +92,7 @@ If the customer purchases a single clothing item for $17.99 and they live in the
 The sales tax calculation is $17.99 x 5% for a total tax of $0.8995, which is rounded up to two decimal places, to $0.90. This tax amount is then applied to the order as an adjustment.
 
 ***
-See the [Adjustments Guide](adjustments) if you need more information on adjustments.
+See the [Adjustments Guide](https://github.com/spree/spree-guides/blob/master/content/developer/core/adjustments.md) if you need more information on adjustments.
 ***
 
 If the quantity of the item is changed to 2, then the tax amount doubles: ($17.99 x 2) x 0.05 is $1.799, which is again rounded up to two decimal places, applying a tax adjustment of $1.80.
